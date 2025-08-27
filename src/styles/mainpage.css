@@ -1,0 +1,73 @@
+* { font-family: 'SF Pro Display', sans-serif; margin: 0; }
+
+.app-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    /* Fallback solid color */
+    background-color: #161240;
+    /* Proper gradient syntax (color stops in ascending order) */
+    background-image: linear-gradient(
+        to bottom,
+        #161240 0%,
+        #161240 30%,
+        #090909 40%,
+        #161240 70%,
+        #161240 100%
+    );
+    /* Ensure the gradient covers entire area even if content smaller than viewport */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* optional parallax-like effect */
+    color: #fff;
+}
+
+.main-content {
+    flex: 1 1 auto;
+    width: 100%;
+    padding: 16px 16px 80px; /* bottom padding so content not hidden behind bar */
+    box-sizing: border-box;
+}
+
+/* Bottom navigation bar */
+.sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #090909;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.4);
+    z-index: 100;
+    border-radius: 5px;
+}
+
+.sidebar nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px 12px;
+    margin: 0;
+    list-style: none;
+}
+
+.sidebar nav li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    transition: background 0.25s, transform 0.25s;
+    user-select: none;
+}
+
+.sidebar nav li a.active { background: #6A57D3; border-radius: 30px;}
+.sidebar nav li a:hover { background: #6A57D3; transform: translateY(-2px); }
+
+.sidebar nav img { width: 30px; height: 30px; object-fit: contain; }
+
+@media (min-width: 800px) {
+    /* Optionally center content with max width on larger screens */
+    .main-content { max-width: 960px; margin: 0 auto; }
+}

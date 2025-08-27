@@ -1,0 +1,122 @@
+* {
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.signup-container {
+    width: 100%;
+    height: 899px;
+     /* Fallback solid color */
+    background-color: #161240;
+    /* Proper gradient syntax (color stops in ascending order) */
+    background-image: linear-gradient(
+        to bottom,
+        #161240 0%,
+        #161240 30%,
+        #090909 40%,
+        #161240 70%,
+        #161240 100%
+    );
+    /* Ensure the gradient covers entire area even if content smaller than viewport */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* optional parallax-like effect */
+    color: #fff;
+}
+
+.signup-form-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.signup-form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    gap: 8px;
+}
+
+.form-container .signup-label {
+    display: flex;
+    flex-direction: column;
+    padding: 22px 32px 22px 32px;
+    gap: 8px;
+    justify-content: center;
+    align-items: first baseline;
+}
+
+.signup-form-header h1 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    font-family: inherit;
+}
+
+.signup-form-header p {
+    font-family: inherit;
+    font-weight: light;
+    font-size: 14px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+/*General LABEL styling*/
+.signup-label label {
+    padding-left: 8px;
+
+    font-family: inherit;
+    font-size: 17px;
+    color: #ffffff;
+    line-height: 22px;
+}
+
+.signup-label input {
+    width: 95%;
+    height: 44px;
+    border-radius: 14px;
+
+}
+
+/*Signup button*/
+.signup-btn {
+    margin-left: 9%;
+    margin-top: 2%;
+    width: 79%;
+    height: 44px;
+    border-radius: 19px;
+
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+    min-width: 82%;
+    background: #246BFB;
+}
+
+
+.align-center {
+    justify-self: center;
+    padding-left: .5%;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+/*Social Links stylings*/
+.social-signup {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-signup img {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+}

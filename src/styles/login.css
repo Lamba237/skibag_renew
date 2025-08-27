@@ -1,0 +1,134 @@
+* {
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.login-container {
+    width: 100%;
+    height: 892px;
+     /* Fallback solid color */
+    background-color: #161240;
+    /* Proper gradient syntax (color stops in ascending order) */
+    background-image: linear-gradient(
+        to bottom,
+        #161240 0%,
+        #161240 30%,
+        #090909 40%,
+        #161240 70%,
+        #161240 100%
+    );
+    /* Ensure the gradient covers entire area even if content smaller than viewport */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* optional parallax-like effect */
+    color: #fff;
+    
+}
+
+.login-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.login-header h1 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    font-family: inherit;
+}
+
+.login-header p {
+    font-family: inherit;
+    font-weight: light;
+    font-size: 14px;
+    line-height: 22px;
+    color: #ffffff;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*label container styles*/
+.form-container .label {
+    display: flex;
+    flex-direction: column;
+    padding: 22px 32px 22px 32px;
+    gap: 8px;
+    justify-content: center;
+    align-items: first baseline;
+}
+
+.form-container p {
+    color: #ffffff;
+    font-family: inherit;
+    text-align: center;
+    font-weight: light;
+    font-size: 16px;
+    line-height: 22px;
+
+}
+
+/*Email Label container*/
+.label label {
+    padding-left: 8px;
+}
+
+.label input {
+    width: 95%;
+    height: 44px;
+    border-radius: 14px;
+}
+
+/*Password Label stylings*/
+
+.password-label p {
+    align-self: flex-end;
+    margin-right: 8%;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+/*Label Styles*/
+label {
+    font-family: inherit;
+    font-size: 17px;
+    color: #ffffff;
+    line-height: 22px;
+
+}
+
+/*Login button Stylings*/
+.login-btn {
+    margin-left: 9%;
+    width: 79%;
+    height: 44px;
+    border-radius: 19px;
+
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+    min-width: 82%;
+    background: #246BFB;
+    cursor: pointer;
+}
+
+/*Social Links stylings*/
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-login img {
+    width: 55px;
+    height: 55px;
+}

@@ -1,0 +1,233 @@
+* { font-family: 'SF Pro Display sans-serif'; margin: 0; }
+
+.home-container {
+    width: 100%;
+    height: 100%;
+}
+/*User info Section*/
+.user-info-header {
+    padding: 22px 22px 22px 22px;
+    
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 11%;
+    margin-top: 8%;
+    
+   background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    
+}
+.user-info-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.user-info-details h2 {
+    font-size: 13px;
+}
+
+.country {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.country span {
+    font-size: 10px;
+    line-height: 22px;
+}
+
+/* Points badge pill */
+.points-badge {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background: linear-gradient(90deg,#1E62FF,#539BFF);
+    padding: 6px 10px 6px 14px;
+    border-radius: 999px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+.points-number { font-size: 12px; color: #fff; letter-spacing: 0.5px; }
+.points-plus {
+    background: #fff;
+    color: #1E62FF;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Most Played Carousel */
+.most-played { margin-top: 32px; width: 100%; }
+.most-played-header { display: flex; justify-content: space-between; align-items: center; padding: 0 8px 10px; margin-bottom: 17px;}
+.most-played-header h2 { font-size: 16px; }
+.search-category { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+.search-category p { font-size: 10px; color: #ccc; }
+.search-category img { width: 20px; height: 20px; }
+
+.carousel { position: relative; width: 100%; overflow: hidden; border-radius: 18px; }
+.slides { display: flex; width: 100%; transition: transform .10s cubic-bezier(.4,.15,.2,1); }
+.slide { position: relative; min-width: 100%; height: 210px; display: flex; }
+.slide-bg { inset: 0; width: 100%; height: 100%; overflow: hidden; border-radius: 18px; }
+.slide-bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.overlay-info { position: absolute; left: 0; right: 0; bottom: 0; padding: 14px 18px 18px; background: linear-gradient(180deg,rgba(0,0,0,0) 0%, rgba(0,0,0,.75) 100%); border-radius: 0 0 18px 18px; }
+.overlay-info h3 { font-size: 14px; margin-bottom: 6px; }
+.overlay-info .rating { display: flex; align-items: center; gap: 6px; }
+.overlay-info .rating img { height: 14px; width: auto; }
+.overlay-info .rating span { font-size: 12px; font-weight: 500; }
+
+.dots { position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%); display: flex; gap: 6px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.35); border: none; cursor: pointer; padding: 0; transition: background .3s, transform .3s; }
+.dot.active { background: #fff; transform: scale(1.15); }
+.dot:focus-visible { outline: 2px solid #246BFB; outline-offset: 2px; }
+
+@media (min-width: 600px) { .slide { height: 260px; } }
+
+/*Most Played component*/
+
+.most-played-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 70px;
+}
+
+.most-played-header h2 {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.search-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.search-category p {
+    font-size: 10px;
+}
+
+/*Game card*/
+#most-played-item { 
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    width: 100%;
+    height: 90%;
+}
+
+#most-played-item .game-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+
+/*Discover more section*/
+
+.discover-games-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 140px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+/*
+* Grid items for Discover games section
+*/
+
+.games-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* show scrollbar only when needed */
+    /* Constrain height so scrollbar can appear when list grows */
+    max-height: clamp(220px, 38vh, 360px);
+    padding-right: 4px; /* room for scrollbar */
+    overscroll-behavior: contain;
+}
+
+/* Custom scrollbar (WebKit) */
+.games-grid::-webkit-scrollbar { width: 6px; }
+.games-grid::-webkit-scrollbar-track { background: transparent; }
+.games-grid::-webkit-scrollbar-thumb { background: #246BFB55; border-radius: 4px; }
+.games-grid::-webkit-scrollbar-thumb:hover { background: #246BFB99; }
+
+/* Firefox scrollbar */
+.games-grid { scrollbar-width: thin; scrollbar-color: #246BFB55 transparent; }
+
+
+.grid-items {
+    display: flex;
+    padding: 22px 32px 22px 32px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding-left: 20px;
+    padding-top: 7px;
+}
+
+.grid-text-item h2 {
+    font-size: 14.04px;
+    font-family: inherit;
+    line-height: 23.8px;
+    font-weight: 500;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.rating span {
+    font-size: 11.09px;
+    font-family: inherit;
+    line-height: 12.8px;
+}
+
+.play-now-btn {
+    width: 23%;
+    margin-left: auto;
+    height: 37px;
+    border-radius: 26px;
+    align-self: center;
+    background: #246BFB;
+    border: none;
+
+    color: #fff;
+    font-size: 14.04px;
+    line-height: 23.8px;
+    font-weight: 500;
+}
